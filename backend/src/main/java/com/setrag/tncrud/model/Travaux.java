@@ -14,7 +14,7 @@ import lombok.Data;
 @Entity
 @Table(name = "travaux")
 @Data
-public class travaux {
+public class Travaux {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -56,5 +56,8 @@ public class travaux {
 	@ManyToOne
 	private Regime regime;
 	
+	public Travaux() {
+		
+	}
 	
 }
