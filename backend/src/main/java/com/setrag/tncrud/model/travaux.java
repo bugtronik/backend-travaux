@@ -1,6 +1,5 @@
 package com.setrag.tncrud.model;
 
-
 import java.util.Date;
 
 import jakarta.persistence.Column;
@@ -45,6 +44,7 @@ public class travaux {
 	@Column(name = "commentaire")
 	private String commentaire;
 	
+	@Column(name="date_creation")
 	private Date date_creation;
 	
 	@ManyToOne
