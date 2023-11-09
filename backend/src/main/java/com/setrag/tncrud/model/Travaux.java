@@ -57,4 +57,27 @@ public class Travaux {
 	@ManyToOne
 	private Regime regime;
 	
+	/*
+	public Travaux() {
+		
+	}
+	
+	public Travaux(Date demande_debut, Date demande_fin, String parcours, 
+				   String type, Date heure_debut,
+				   Date heure_fin, Date fin_reel, String commentaire, Date date_creation,
+				   Gare gare, Canton canton, Regime regime) {
+		this.demande_debut = demande_debut;
+		this.demande_fin = demande_fin;
+		this.parcours = parcours;
+		this.type = type;
+		this.heure_debut = heure_debut;
+		this.heure_fin = heure_fin;
+		this.fin_reel = fin_reel;
+		this.commentaire = commentaire;
+		this.date_creation = date_creation;
+		this.gare = gare;
+		this.canton = canton;
+		this.regime = regime;
+	} */
+	
 }
