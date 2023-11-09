@@ -14,7 +14,7 @@ import lombok.Data;
 public class Gare {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
 	@Column(name = "libelle")
