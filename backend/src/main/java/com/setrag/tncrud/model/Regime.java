@@ -14,7 +14,7 @@ import lombok.Data;
 public class Regime {
 
 	@Id
-	@GeneratedValue (strategy = GenerationType.AUTO)
+	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private long id;
 	
 	@Column(name = "libelle")
@@ -25,6 +25,6 @@ public class Regime {
 	}
 	
 	public Regime(String libelle) {
-		
+		this.libelle = libelle;
 	}
 }

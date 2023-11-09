@@ -1,5 +1,6 @@
 package com.setrag.tncrud.model;
 
+import java.time.LocalTime;
 import java.util.Date;
 
 import jakarta.persistence.Column;
@@ -21,10 +22,10 @@ public class Travaux {
 	private long id;
 	
 	@Column(name = "demande_debut")
-	private String demande_debut;
+	private Date demande_debut;
 	
 	@Column(name = "demande_fin")
-	private String demande_fin;
+	private Date demande_fin;
 	
 	@Column(name = "parcours")
 	private String parcours;
@@ -33,13 +34,13 @@ public class Travaux {
 	private String type;
 	
 	@Column(name = "heure_debut")
-	private String heure_debut;
+	private Date heure_debut;
 	
 	@Column(name = "heure_fin")
-	private String heure_fin;
+	private Date heure_fin;
 	
 	@Column(name = "fin_reel")
-	private String fin_reel;
+	private Date fin_reel;
 	
 	@Column(name = "commentaire")
 	private String commentaire;
@@ -55,9 +56,5 @@ public class Travaux {
 	
 	@ManyToOne
 	private Regime regime;
-	
-	public Travaux() {
-		
-	}
 	
 }
