@@ -52,24 +52,14 @@ public class TravauxController {
 		}
 	}
 	
-	/*
 	@PostMapping("/travaux")
 	public ResponseEntity<Travaux> createTravaux(@RequestBody Travaux travaux) {
 		try {
-			Travaux _travaux = travauxRepository.save(new Travaux(travaux.getDemande_debut(),
-																  travaux.getDemande_fin(),
-																  travaux.getParcours(),
-																  travaux.getType(),
-																  travaux.getHeure_debut(),
-																  travaux.getHeure_fin(),
-																  travaux.getFin_reel(),
-																  travaux.getCommentaire(),
-																  travaux.getDate_creation(),
-																  travaux.getGare(),
-																  travaux.getCanton(),
-																  travaux.getRegime()));
+			Travaux _travaux = travauxRepository.save(travaux);
+			return new ResponseEntity<>(_travaux, HttpStatus.CREATED);
+		} catch (Exception e) {
+			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-	*/
 	
 }
