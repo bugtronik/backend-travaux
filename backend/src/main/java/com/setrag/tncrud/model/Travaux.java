@@ -48,10 +48,17 @@ public class Travaux {
 	@Column(name="date_creation")
 	private Date date_creation;
 	
+	@Column(name="canton")
+	private String canton;
+	
+	@Column(name="regime")
+	private String regime;
+	
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "id_gare")
 	private Gare gare;
 	
+	/*
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "id_canton")
 	private Canton canton;
@@ -59,4 +66,5 @@ public class Travaux {
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "id_regime")
 	private Regime regime;
+	*/
 }
