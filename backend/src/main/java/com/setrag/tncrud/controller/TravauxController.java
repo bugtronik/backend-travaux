@@ -52,6 +52,7 @@ public class TravauxController {
 		}
 	}
 	
+<<<<<<< Updated upstream
 	@PostMapping("/travaux")
 	public ResponseEntity<Travaux> createTravaux(@RequestBody Travaux travaux) {
 		try {
@@ -61,5 +62,8 @@ public class TravauxController {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
+=======
+	
+>>>>>>> Stashed changes
 	
 }

@@ -1,7 +1,16 @@
 package com.setrag.tncrud.model;
+<<<<<<< Updated upstream
 import java.util.Date;
+=======
+
+import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+>>>>>>> Stashed changes
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -45,17 +54,39 @@ public class Travaux {
 	@Column(name="date_creation")
 	private Date date_creation;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	@JsonIgnore
 	private Gare gare;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	@JsonIgnore
 	private Canton canton;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	@JsonIgnore
 	private Regime regime;
 	
 	
 	public Travaux() {
 		
 	}
+<<<<<<< Updated upstream
+=======
+	
+	public Travaux(Date demande_debut, Date demande_fin, String parcours, 
+				   String type, Date heure_debut,
+				   Date heure_fin, Date fin_reel, String commentaire, Date date_creation,
+				   Gare gare, Canton canton, Regime regime) {
+		this.demande_debut = demande_debut;
+		this.demande_fin = demande_fin;
+		this.parcours = parcours;
+		this.type = type;
+		this.heure_debut = heure_debut;
+		this.heure_fin = heure_fin;
+		this.fin_reel = fin_reel;
+		this.commentaire = commentaire;
+		this.date_creation = date_creation;
+	}
+	
+>>>>>>> Stashed changes
 }
