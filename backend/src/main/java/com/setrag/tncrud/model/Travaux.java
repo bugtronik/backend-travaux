@@ -54,6 +54,9 @@ public class Travaux {
 	@Column(name="regime")
 	private String regime;
 	
+	@Column(name="etat")
+	private String etat;
+	
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "id_gare")
 	private Gare gare;
