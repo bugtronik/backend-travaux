@@ -1,5 +1,7 @@
 package com.setrag.tncrud.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -17,7 +19,7 @@ import lombok.Data;
 public class Travaux {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
 	@Column(name = "demande_debut")
@@ -56,7 +58,7 @@ public class Travaux {
 	@Column(name="etat")
 	private String etat;
 	
-	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_gare")
 	private Gare gare;
 	

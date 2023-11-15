@@ -33,7 +33,6 @@ public class TravauxController {
 		try {
 			List<Travaux> travaux = new ArrayList<Travaux>();
 			travauxRepository.findAll().forEach(travaux::add);
-			System.out.println(travaux);
 			if(travaux.isEmpty()) {
 				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 			}
