@@ -33,7 +33,7 @@ public class TravauxController {
 		try {
 			List<Travaux> travaux = new ArrayList<Travaux>();
 			travauxRepository.findAll().forEach(travaux::add);
-			
+			System.out.println(travaux);
 			if(travaux.isEmpty()) {
 				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 			}
@@ -58,7 +58,20 @@ public class TravauxController {
 	@PostMapping("/travaux")
 	public ResponseEntity<Travaux> createTravaux(@RequestBody Travaux travaux) {
 		try {
-			Travaux _travaux = travauxRepository.save(travaux);
+			Travaux _travaux = travauxRepository.save(new Travaux(
+					travaux.getDemande_debut(),
+					travaux.getDemande_fin(),
+					travaux.getParcours(),
+					travaux.getType(),
+					travaux.getHeure_debut(),
+					travaux.getHeure_fin(),
+					travaux.getFin_reel(),
+					travaux.getCommentaire(),
+					travaux.getDate_creation(),
+					travaux.getCanton(),
+					travaux.getRegime(),
+					travaux.getEtat(),
+					travaux.getGare()));
 			return new ResponseEntity<>(_travaux, HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
