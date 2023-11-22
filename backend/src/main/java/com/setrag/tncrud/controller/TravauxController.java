@@ -85,6 +85,18 @@ public class TravauxController {
 			Travaux _travaux = travauxData.get();
 			_travaux.setDemande_debut(travaux.getDemande_debut());
 			_travaux.setDemande_fin(travaux.getDemande_fin());
+			_travaux.setParcours(travaux.getParcours());
+			_travaux.setType(travaux.getType());
+			_travaux.setHeure_debut(travaux.getHeure_debut());
+			_travaux.setHeure_fin(travaux.getHeure_fin());
+			_travaux.setFin_reel(travaux.getFin_reel());
+			_travaux.setCommentaire(travaux.getCommentaire());
+			_travaux.setDate_creation(travaux.getDate_creation());
+			_travaux.setCanton(travaux.getCanton());
+			_travaux.setRegime(travaux.getRegime());
+			_travaux.setEtat(travaux.getEtat());
+			_travaux.setGare(travaux.getGare());
+			System.out.println(travaux);
 			return new ResponseEntity<>(travauxRepository.save(_travaux), HttpStatus.OK);
 		} else {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);

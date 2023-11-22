@@ -25,6 +25,7 @@ public class Gare {
 	}
 	
 	public Gare(String libelle) {
+		super();
 		this.libelle = libelle;
 	}
 }
